@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import MemePic from './meme-pic'
+import './memes.css'
 
 class Memes extends Component {
   constructor(props){
@@ -20,7 +21,10 @@ class Memes extends Component {
         <h2>hi</h2>
         <div id = "Memes">
           {this.state.pics.map(pic=> 
-            <div key = {this.state.pics.id} id = 'Memepic'>
+            <div 
+            key = {this.state.pics.id} 
+            id = 'Memepic' 
+            >
               <MemePic
                 id = {pic.id}
                 url = {pic.url}

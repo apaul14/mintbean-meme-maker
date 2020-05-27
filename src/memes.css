@@ -1,0 +1,10 @@
+#Memes {
+  display:flex;
+  flex-direction: row;
+}
+
+#pic {
+  display:flex;
+  flex: 0 1 auto;
+  margin: 8px;
+}
