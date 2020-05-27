@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Memes from './memes'
+import Editor from './image_editor.js'
+import 'tui-image-editor/dist/tui-image-editor.css'
+import ImageEditor from '@toast-ui/react-image-editor'
 
 function App() {
   return (
@@ -21,7 +24,7 @@ function App() {
         </a>
       </header> */}
       <Memes/>
-
+      <Editor/>
     </div>
   );
 }

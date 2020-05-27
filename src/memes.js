@@ -13,7 +13,6 @@ class Memes extends Component {
   async componentDidMount(){
     const {data} = await axios.get(`https://api.imgflip.com/get_memes`)
     this.setState(this.state.pics = data.data.memes)
-    console.log(this.state)
   }
   render(){
     return (
@@ -22,7 +21,7 @@ class Memes extends Component {
         <div id = "Memes">
           {this.state.pics.map(pic=> 
             <div 
-            key = {this.state.pics.id} 
+            key = {pic.id} 
             id = 'Memepic' 
             >
               <MemePic
