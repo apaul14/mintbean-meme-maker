@@ -1,9 +1,16 @@
 import React, {Component} from 'react'
 
-class Memepic extends Component {
-  constructor(){
+const MemePic = props => (
+    <div>
+        <img 
+          src = {props.url}
+          height = {200}
+          width = {200}
+          mode='fit'
+          />
+        
+    </div>
+    )
 
-  }
-}
 
-export default Memepic
+export default MemePic

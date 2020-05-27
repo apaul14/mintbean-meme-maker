@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import MemePic from './meme-pic'
 
 class Memes extends Component {
   constructor(props){
@@ -10,12 +11,24 @@ class Memes extends Component {
   }
   async componentDidMount(){
     const {data} = await axios.get(`https://api.imgflip.com/get_memes`)
-    this.setState(this.state.pics = data.memes)
-    console.log(data)
+    this.setState(this.state.pics = data.data.memes)
+    console.log(this.state)
   }
   render(){
     return (
-      <h2>Hello</h2>
+      <div>
+        <h2>hi</h2>
+        <div id = "Memes">
+          {this.state.pics.map(pic=> 
+            <div key = {this.state.pics.id} id = 'Memepic'>
+              <MemePic
+                id = {pic.id}
+                url = {pic.url}
+              />
+            </div>
+          )}     
+        </div>
+      </div>
     )
   }
 }
