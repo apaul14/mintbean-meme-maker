@@ -16,7 +16,7 @@ class MemePic extends Component {
     handleClick(e) {
       e.preventDefault();
       this.setState({selectedUrl : this.props.url})
-      console.log(this.state)
+     // console.log(this.state)
   }
 
   render() {
