@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import './memes.css'
+import {Container, Row, Col} from 'react-bootstrap'
+
 
 // const MemePic = props => (
     
@@ -20,15 +22,22 @@ class MemePic extends Component {
 
   render() {
     return(
-      <div id = "pic">
-        <img 
-          src = {this.props.url}
-          alt = {"hey"}
-          height = {200}
-          width = {200}
-          onClick={this.handleClick}
-        />
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <div id = "pic">
+            <img 
+              src = {this.props.url}
+              alt = {"hey"}
+              height = {200}
+              width = {200}
+              onClick={this.handleClick}
+            />
+            </div>
+          </Col>
+        </Row>
+      
+      </Container>
     )
   }
 }

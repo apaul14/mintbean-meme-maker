@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import MemePic from './meme-pic'
-import './memes.css'
+//import './memes.css'
+import {Container, Row, Col} from 'react-bootstrap'
 
 class Memes extends Component {
   constructor(props){
@@ -16,22 +17,25 @@ class Memes extends Component {
   }
   render(){
     return (
-      <div>
-        <h2>hi</h2>
-        <div id = "Memes">
-          {this.state.pics.map(pic=> 
-            <div 
-            key = {pic.id} 
-            id = 'Memepic' 
-            >
-              <MemePic
-                id = {pic.id}
-                url = {pic.url}
-              />
+      <Container>
+        <Row>
+          <Col>
+            <div id = "Memes">
+              {this.state.pics.map(pic=> 
+                <div 
+                key = {pic.id} 
+                id = 'Memepic' 
+                >
+                  <MemePic
+                    id = {pic.id}
+                    url = {pic.url}
+                  />
+                </div>
+              )}     
             </div>
-          )}     
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }
