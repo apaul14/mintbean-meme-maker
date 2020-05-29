@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './memes.css'
-import {Container, Row, Col} from 'react-bootstrap'
+import {Carousel} from 'react-bootstrap'
+
 
 
 // const MemePic = props => (
@@ -21,8 +22,23 @@ class MemePic extends Component {
   }
 
   render() {
+    console.log(this.props.url)
     return(
-      <Container>
+      <Carousel.Item>
+        <img 
+          className="d-block w-100"
+          src = {this.props.url}
+          alt = {"hey"}
+          height = {200}
+          width = {200}
+          onClick={this.handleClick}
+        />
+      </Carousel.Item>
+    )
+  }
+}
+
+/* <Container>
         <Row>
           <Col>
             <div id = "pic">
@@ -37,9 +53,6 @@ class MemePic extends Component {
           </Col>
         </Row>
       
-      </Container>
-    )
-  }
-}
+      </Container> */
 
 export default MemePic

@@ -10,8 +10,6 @@ const myTheme = {
 
 const Editor = () => (
   <Container>
-    <Row>
-      <Col>
         <ImageEditor
           includeUI={{
             loadImage: {
@@ -27,16 +25,14 @@ const Editor = () => (
               },
           menuBarPosition: 'bottom'
           }}
-          cssMaxHeight={500}
-          cssMaxWidth={700}
+          // cssMaxHeight={500}
+          // cssMaxWidth={700}
           selectionStyle={{
             cornerSize: 20,
             rotatingPointOffset: 70
           }}
           usageStatistics={false}
         />
-      </Col>
-    </Row>
   </Container>
 );
 
