@@ -14,11 +14,13 @@ function App() {
       <Container>
         <Row>
           <Col>
-            <Memes/>
+            <h3>Select Your Meme:</h3>
+            <br/>
+            <Memes/> 
           </Col>
-          {/* <Col>
-            <Editor/>
-          </Col> */}
+          <Col>
+            {/* <Editor/> */}
+          </Col>
         </Row>
       </Container>
     </Jumbotron>
