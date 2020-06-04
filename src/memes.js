@@ -17,11 +17,11 @@ class Memes extends Component {
     this.setState(this.state.pics = data.data.memes)
   }
 
-  handleClick(e) {
-    e.preventDefault();
-    //this.setState({selectedUrl : this.url})
-    console.log(e.url)
-  }
+  // handleClick(e) {
+  //   e.preventDefault();
+  //   this.setState({selectedUrl : this.url})
+  //   console.log(e.url)
+  // }
 
 
   render(){
